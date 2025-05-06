@@ -1,5 +1,7 @@
+% Main document class and settings
 \documentclass[letterpaper,10pt]{article}
 
+% --- Package imports ---
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -17,7 +19,7 @@
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 
-% Define a rich, dark navy/royal blue color
+%-------- COLOR OPTIONS --------
 \definecolor{accentblue}{RGB}{15,32,90}
 
 %----------FONT OPTIONS----------
@@ -31,14 +33,14 @@
 % \usepackage{CormorantGaramond}
 % \usepackage{charter}
 
-
+% --- Page layout settings ---
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
+% --- Margin adjustments ---
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.19in}
@@ -46,21 +48,19 @@
 \addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
+% --- Section formatting ---
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
+% Ensure PDF is machine readable/ATS parsable
 \pdfgentounicode=1
 
-%-------------------------
-% Custom commands
+% --- Custom commands for resume elements ---
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
@@ -97,6 +97,7 @@
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
+% --- List styling ---
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
@@ -105,13 +106,10 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
+% ==================== DOCUMENT CONTENT BEGINS ====================
 \begin{document}
 
-%----------HEADING----------
+% --- HEADER SECTION ---
 \begin{center}
 {\Huge \textcolor{accentblue}{\scshape Shaswat Gupta}} \\ \vspace{2pt}
 \faMapMarker~Zurich, Switzerland \quad | \quad \faEnvelope~\href{mailto:shagupta@ethz.ch}{shagupta@ethz.ch} \quad | \quad \faPhone~+41 76 267 1025 \\ \vspace{1pt}
@@ -122,21 +120,19 @@
 \vspace{-8pt}
 \end{center}
 
-%-----------EDUCATION-----------
-% \section{Education}
-  \resumeSubHeadingListStart
+% --- EDUCATION SECTION ---
+\resumeSubHeadingListStart
     \resumeSubheading
       {ETH Zürich}{Sept 2023 -- Present}
       {MSc Computer Science, Large Scale AI Engg., Cloud Computing, Deep Learning, GPA: 5.25/6}{Zurich, Switzerland}
     \resumeSubheading
       {Indian Institute of Technology Bombay (IIT Bombay)}{July 2018 -- Aug 2022}
           {B.Tech. in Mechanical Engineering, \textbf{Rank 1/165, Gold Medalist, Highest GPA} in batch: 9.6/10}{Mumbai, India}
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 
-%-----------PROFESSIONAL EXPERIENCE-----------
+% --- PROFESSIONAL EXPERIENCE SECTION ---
 \section{Professional Experience}
-  \resumeSubHeadingListStart
-
+\resumeSubHeadingListStart
 
     \resumeSubheading
       {AB InBev — Growth Analytics Center}{Aug 2022 -- Aug 2023}
@@ -165,20 +161,18 @@
               {Data Science (internship, 2 months)}{Mumbai, India}
       \resumeItemListStart
           \resumeItem{Engineered combinatorial optimization model for MSME debt portfolios and an AI-driven loan recommendation engine}
-          % \resumeItem{Implemented sales territory optimization using geospatial analytics with Google Maps API and K-means clustering.}
           \resumeItem{Built automated pipeline for time-based yield analysis across 600+ debt securities; received partner-signed recommendation.}
-          % \resumeItem{\textbf{Tech:} Python, PuLP, NumPy, Pandas, scikit-learn, Google Maps API, AWS, Apache Spark, Statistical Modeling.}
       \resumeItemListEnd
 
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 \vspace{-16pt}
 
-%-----------RESEARCH EXPERIENCE-----------
+% --- RESEARCH EXPERIENCE SECTION ---
 \section{Research Experience}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
         \resumeSubheading
       {Institute for Machine Learning, ETH Zürich}{Jan 2024 -- Present}
-      {ML Research Projects \& AI Engineering}{Zurich, Switzerland}
+      {Machine Learning Research Projects \& AI Engineering}{Zurich, Switzerland}
             \resumeItemListStart
                 \resumeItem{\textbf{Large Scale AI Engineering:} Engineered PyRecover module for distributed checkpointing and auto job resubmission in distributed GPU training. Significantly improved fault tolerance across HPC clusters and reduced compute waste}
                 \resumeItem{\textbf{SimpleSleepNet:} Developed modular self-supervised contrastive learning framework for EEG-based sleep stage classification (80\%+ accuracy, $<$1MB model). Evaluated 13 signal augmentations across 5 categories \textit{PyTorch, Slurm HPC, Deep Learning}}
@@ -203,16 +197,16 @@
           \resumeItem{\textbf{RephraseAI (Forbes 30-Under-30), Synthetic Media:} Contributed to AI-generated synthetic video technology startup (acquired by Adobe). Showcased video synthesis platform at AWS AI Conclave '19 to 100+ C-suite executives}
           \resumeItemListEnd
 
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 \vspace{-16pt}
 
-%-----------HONORS & SKILLS-----------
+% --- HONORS & SKILLS SECTION ---
 \section{Honors \& Skills}
 {\small
 \begin{multicols}{2}
 
 % Left column - Awards
-{\vspace{-4pt}\scshape\raggedright\large\bfseries Awards \& Distinctions}\vspace{-6pt}
+{\vspace{-4pt}\scshape\raggedright\large\bfseries Awards \& Distinctions}
 \begin{itemize}[leftmargin=0.15in, itemsep=-2pt]
   \item Gold Medalist, Department Rank 1/165, IIT Bombay (2022)
   \item Institute Academic Award (Top 2 students), IIT Bombay (2021)
@@ -226,19 +220,18 @@
 \columnbreak
 
 % Right column - Skills
-{\vspace{-4pt}\scshape\raggedright\large\bfseries Technical Skills}\vspace{4pt}
+{\vspace{-4pt}\scshape\raggedright\large\bfseries Technical Skills}
 \begin{itemize}[leftmargin=0.15in]
   \item \textbf{Programming:} Python, C++, SQL, Bash/Linux 
   \item \textbf{Machine Learning \& AI:} PyTorch, TensorFlow, scikit-learn, XGBoost, Hugging Face Transformers, LLMs, OpenAI API, LangChain, CatBoost, LightGBM, BERTopic
   \item \textbf{Data Engineering:} Pandas, NumPy, PySpark, Polars, PyArrow, Scipy, Snowflake, statsmodels, PostgreSQL, BigQuery
   \item \textbf{MLOps \& Cloud:} Git, Docker, Kubernetes, GitHub Actions, AWS (EC2/S3/Lambda), Azure ML, GCP, MLflow
 \end{itemize}
-
 \end{multicols}
 }
+
 \vspace{-16pt}
+
 \end{document}
 
-%-------------------------------------------
-%%%%%%  RESUME ENDS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%-------------------------------------------
+% ==================== END OF DOCUMENT ====================
