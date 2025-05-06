@@ -17,6 +17,8 @@
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 
+% Define a rich, dark navy/royal blue color
+\definecolor{accentblue}{RGB}{15,32,90}
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -75,14 +77,14 @@
   \vspace{-2pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & \textbf{\small #2} \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textcolor{accentblue}{\textit{\small#3}} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
+      \textcolor{accentblue}{\textit{\small#1}} & \textcolor{accentblue}{\textit{\small #2}} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -111,12 +113,12 @@
 
 %----------HEADING----------
 \begin{center}
-{\Huge \scshape Shaswat Gupta} \\ \vspace{2pt}
-Zurich, Switzerland \quad | \quad \href{mailto:shagupta@ethz.ch}{shagupta@ethz.ch} \quad | \quad +41 76 267 1025 \\ \vspace{1pt}
+{\Huge \textcolor{accentblue}{\scshape Shaswat Gupta}} \\ \vspace{2pt}
+\faMapMarker~Zurich, Switzerland \quad | \quad \faEnvelope~\href{mailto:shagupta@ethz.ch}{shagupta@ethz.ch} \quad | \quad \faPhone~+41 76 267 1025 \\ \vspace{1pt}
 \small
-\href{https://linkedin.com/in/shaswat-gupta/}{\raisebox{-0.2\height}\faLinkedin\ \underline{LinkedIn}}  ~
-\href{https://github.com/Shaswat-G}{\raisebox{-0.2\height}\faGithub\ \underline{GitHub}} ~
-\href{https://shaswat.dev}{\raisebox{-0.2\height}\faGlobe\ \underline{shaswat.dev}}
+\href{https://linkedin.com/in/shaswat-gupta/}{\raisebox{-0.2\height}\faLinkedin\ \textcolor{accentblue}{\underline{LinkedIn}}}  ~
+\href{https://github.com/Shaswat-G}{\raisebox{-0.2\height}\faGithub\ \textcolor{accentblue}{\underline{GitHub}}} ~
+\href{https://shaswat.dev}{\raisebox{-0.2\height}\faGlobe\ \textcolor{accentblue}{\underline{shaswat.dev}}}
 \vspace{-8pt}
 \end{center}
 
@@ -140,19 +142,19 @@ Zurich, Switzerland \quad | \quad \href{mailto:shagupta@ethz.ch}{shagupta@ethz.c
       {AB InBev — Growth Analytics Center}{Aug 2022 -- Aug 2023}
       {}{Bangalore, India}
       \vspace{-15 pt}
-      \resumeSubSubheading{Full Stack Data Scientist (full-time, 6 months)}{}
+      \resumeSubSubheading{\textcolor{accentblue}{Full Stack Data Scientist (full-time, 6 months)}}{}
       \resumeItemListStart
         \resumeItem{Led US supply chain optimization delivering \$2.4M annual savings through ensemble forecasting and logistics optimization.}
         \resumeItem{Rapidly promoted in 6 months; received prestigious 'Pitcher' Award for Global Impact among 200+ employees.}
       \resumeItemListEnd
       
-      \resumeSubSubheading{Associate ML Engineer (full-time, 6 months)}{}
+      \resumeSubSubheading{\textcolor{accentblue}{Associate ML Engineer (full-time, 6 months)}}{}
       \resumeItemListStart
         \resumeItem{Engineered end-to-end ML solutions for 2,000+ US distribution routes; earned 'Pint' Award for Exceptional Performance.}
         \resumeItem{Built production-grade forecasting pipeline and Gurobi-powered integer programming optimizer for logistics.}
       \resumeItemListEnd
 
-      \resumeSubSubheading{Data Science \& ML (internship, 2 months)}{May 2021 -- Jul 2021}
+      \resumeSubSubheading{\textcolor{accentblue}{Data Science \& ML (internship, 2 months)}}{May 2021 -- Jul 2021}
       \resumeItemListStart
           \resumeItem{Developed ML-powered product recommendation engine using SVD/NMF algorithms, driving \$6M  annual revenue growth}
         \resumeItem{Outperformed existing models by 30\%, Awarded Best Intern among 100+ peers; received full-time Associate ML Engineer offer.}
@@ -176,7 +178,7 @@ Zurich, Switzerland \quad | \quad \href{mailto:shagupta@ethz.ch}{shagupta@ethz.c
   \resumeSubHeadingListStart
         \resumeSubheading
       {Institute for Machine Learning, ETH Zürich}{Jan 2024 -- Present}
-      {Research Projects}{Zurich, Switzerland}
+      {ML Research Projects \& AI Engineering}{Zurich, Switzerland}
             \resumeItemListStart
                 \resumeItem{\textbf{Large Scale AI Engineering:} Engineered PyRecover module for distributed checkpointing and auto job resubmission in distributed GPU training. Significantly improved fault tolerance across HPC clusters and reduced compute waste}
                 \resumeItem{\textbf{SimpleSleepNet:} Developed lightweight self-supervised framework for EEG-based sleep stage classification (80\%+ accuracy, $<$1MB model). Evaluated 13 signal augmentations and designed modular pretraining framework reducing annotation needs}
