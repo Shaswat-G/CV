@@ -16,6 +16,8 @@
 \usepackage{multicol}
 \usepackage{setspace}
 \usepackage{graphicx} % For profile picture
+\usepackage{tcolorbox} % For colored backgrounds
+\tcbuselibrary{skins} % Load the skins library to use the 'enhanced' option
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{6pt}
 \input{glyphtounicode}
@@ -26,6 +28,8 @@
 \definecolor{headercolor}{RGB}{0,0,0}
 \definecolor{mutedtext}{RGB}{51,51,51}
 \definecolor{bordercolor}{RGB}{68,68,68}
+\definecolor{sectionbg}{RGB}{245,247,250} % very light grey
+\definecolor{profilebg}{RGB}{232,241,255} % light royal blue
 
 % --- Page layout settings ---
 \pagestyle{empty} % No footer/header
@@ -43,44 +47,81 @@
 \setlength{\tabcolsep}{0in}
 
 % --- Section formatting ---
-\titleformat{\section}{
-  \color{accentblue}\vspace{4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{bordercolor}\titlerule \vspace{-6pt}]
+\newtcolorbox{sectionbox}{
+  colback=sectionbg,
+  colframe=accentblue,
+  boxrule=0pt,
+  arc=2pt,
+  left=4pt,
+  right=4pt,
+  top=2pt,
+  bottom=2pt,
+  enhanced,
+  width=\textwidth,
+  before skip=6pt,
+  after skip=2pt,
+  boxsep=0pt,
+}
+\renewcommand{\section}[1]{%
+  \begin{sectionbox}
+    \color{accentblue}\scshape\raggedright\large\bfseries #1
+  \end{sectionbox}
+  \color{black}
+}
 
 % --- Custom commands for icons and info ---
 \newcommand{\icontext}[2]{\raisebox{-0.2\height}{#1}~#2}
 
 % --- LinkedIn-style profile header ---
-\newcommand{\profileheader}{
-  \vspace{8pt}
-  \begin{tabularx}{\textwidth}{@{}l@{\hspace{1.1cm}}X@{}}
-    % Profile picture (slightly larger with blue border)
-    \fcolorbox{accentblue}{white}{
-      \includegraphics[width=3.0cm,height=3.0cm,keepaspectratio,clip,trim=0 0 0 0]{shaswat.png}
-    }
-    &
-    % Name, title, and contact info
-    \begin{minipage}[b]{\linewidth}
-      {\Huge \textcolor{accentblue}{\scshape Shaswat Gupta}} \\[3pt]
-      {\large \textcolor{mutedtext}{AI Engineer \& Researcher}} \\[6pt]
-      \icontext{\faMapMarker}{\textcolor{mutedtext}{Zurich, Switzerland}} \quad
-      \icontext{\faEnvelope}{\href{mailto:shagupta@ethz.ch}{\textcolor{accentblue}{shagupta@ethz.ch}}} \quad
-      \icontext{\faPhone}{\textcolor{accentblue}{+41 76 267 1025}} \\[5pt]
-      \href{https://linkedin.com/in/shaswat-gupta/}{\icontext{\faLinkedin}{\textcolor{accentblue}{LinkedIn}}} ~
-      \href{https://github.com/Shaswat-G}{\icontext{\faGithub}{\textcolor{accentblue}{GitHub}}} ~
-      \href{https://shaswat.dev}{\icontext{\faGlobe}{\textcolor{accentblue}{shaswat.dev}}}
-    \end{minipage}
-  \end{tabularx}
-  \vspace{6pt}
-  \hrule height 1.2pt \color{bordercolor}
-  \vspace{10pt}
+\newtcolorbox{profilebox}{
+  colback=profilebg,
+  colframe=accentblue,
+  boxrule=0pt,
+  arc=3pt,
+  left=8pt,
+  right=8pt,
+  top=8pt,
+  bottom=8pt,
+  enhanced,
+  width=\textwidth,
+  before skip=0pt,
+  after skip=10pt,
+  boxsep=0pt,
+}
+\newcommand{\profileheader}{%
+  \begin{profilebox}
+    \begin{tabularx}{\textwidth}{@{}l@{\hspace{1.1cm}}X@{}}
+      % Profile picture (slightly larger with blue border)
+      \fcolorbox{accentblue}{white}{
+        \includegraphics[width=3.0cm,height=3.0cm,keepaspectratio,clip,trim=0 0 0 0]{shaswat.png}
+      }
+      &
+      % Name, title, and contact info
+      \begin{minipage}[b]{\linewidth}
+        {\Huge \textcolor{accentblue}{\scshape Shaswat Gupta}} \\[3pt]
+        {\large \textcolor{mutedtext}{AI Engineer \& Researcher}} \\[6pt]
+        \icontext{\faMapMarker}{\textcolor{mutedtext}{Zurich, Switzerland}} \quad
+        \icontext{\faEnvelope}{\href{mailto:shagupta@ethz.ch}{\textcolor{accentblue}{shagupta@ethz.ch}}} \quad
+        \icontext{\faPhone}{\textcolor{accentblue}{+41 76 267 1025}} \\[5pt]
+        \href{https://linkedin.com/in/shaswat-gupta/}{\icontext{\faLinkedin}{\textcolor{accentblue}{LinkedIn}}} ~
+        \href{https://github.com/Shaswat-G}{\icontext{\faGithub}{\textcolor{accentblue}{GitHub}}} ~
+        \href{https://shaswat.dev}{\icontext{\faGlobe}{\textcolor{accentblue}{shaswat.dev}}}
+      \end{minipage}
+    \end{tabularx}
+    \vspace{6pt}
+    \hrule height 1.2pt \color{bordercolor}
+  \end{profilebox}
 }
 
 % --- Letter section formatting ---
-\newcommand{\letterSection}[1]{
-  \section*{#1}
-  \vspace{-8pt}
+\newcommand{\letterSection}[1]{%
+    \vspace{8 pt}
+  \begin{sectionbox}
+    \color{accentblue}\scshape\raggedright\large\bfseries #1
+  \end{sectionbox}
+  \vspace{4 pt}
 }
+
 
 % --- Document starts here ---
 \begin{document}
@@ -126,10 +167,9 @@ The opportunity to participate in the full innovation cycle—from identifying n
 % --- Closing ---
 {\color{headercolor}
 Sincerely,\\[12pt]
-Shaswat Gupta
+Shaswat Gupta\\
 }
-
-\vspace{8pt}
+\vspace{8 pt}
 {\color{mutedtext}
 MSc Computer Science\\
 ETH Zürich
