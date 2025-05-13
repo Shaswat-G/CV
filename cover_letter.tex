@@ -1,124 +1,138 @@
 % Main document class and settings
-    \documentclass[letterpaper,10pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
-    % --- Package imports ---
-    \usepackage{latexsym}
-    \usepackage[empty]{fullpage}
-    \usepackage{titlesec}
-    \usepackage{marvosym}
-    \usepackage[usenames,dvipsnames]{color}
-    \usepackage{enumitem}
-    \usepackage[hidelinks]{hyperref}
-    \usepackage{fancyhdr}
-    \usepackage[english]{babel}
-    \usepackage{tabularx}
-    \usepackage{fontawesome5}
-    \usepackage{multicol}
-    \usepackage{setspace}
-    \setlength{\parindent}{0pt}
-    \setlength{\parskip}{6pt}
-    \input{glyphtounicode}
+% --- Package imports ---
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage{graphicx} % For profile picture
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\input{glyphtounicode}
 
-    % --- Color definitions (from website, now using RGB) ---
-    \definecolor{accentblue}{RGB}{74,122,175}
-    \definecolor{textcolor}{RGB}{17,17,17}
-    \definecolor{headercolor}{RGB}{0,0,0}
-    \definecolor{mutedtext}{RGB}{51,51,51}
-    \definecolor{bordercolor}{RGB}{68,68,68}
+% --- Color definitions ---
+\definecolor{accentblue}{RGB}{74,122,175}
+\definecolor{textcolor}{RGB}{17,17,17}
+\definecolor{headercolor}{RGB}{0,0,0}
+\definecolor{mutedtext}{RGB}{51,51,51}
+\definecolor{bordercolor}{RGB}{68,68,68}
 
-    % --- Page layout settings ---
-    \pagestyle{fancy}
-    \fancyhf{}
-    \fancyfoot{}
-    \renewcommand{\headrulewidth}{0pt}
-    \renewcommand{\footrulewidth}{0pt}
+% --- Page layout settings ---
+\pagestyle{empty} % No footer/header
 
-    % --- Margin adjustments ---
-    \addtolength{\oddsidemargin}{-0.6in}
-    \addtolength{\evensidemargin}{-0.5in}
-    \addtolength{\textwidth}{1.19in}
-    \addtolength{\topmargin}{-.7in}
-    \addtolength{\textheight}{1.4in}
+% --- Margin adjustments ---
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
 
-    \urlstyle{same}
-    \raggedbottom
-    \raggedright
-    \setlength{\tabcolsep}{0in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
 
-    % --- Section formatting ---
-    \titleformat{\section}{
-    \color{accentblue}\vspace{8pt}\scshape\raggedright\large\bfseries
-    }{}{0em}{}[\color{bordercolor}\titlerule \vspace{-5pt}]
+% --- Section formatting ---
+\titleformat{\section}{
+  \color{accentblue}\vspace{4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{bordercolor}\titlerule \vspace{-6pt}]
 
-    % --- Custom commands for icons and info ---
-    \newcommand{\icontext}[2]{\raisebox{-0.2\height}{#1}~#2}
-    \newcommand{\headerinfo}{
-    \begin{center}
-        {\Huge \textcolor{accentblue}{\scshape Shaswat Gupta}} \\[2pt]
-        \icontext{\faMapMarker}{Zurich, Switzerland} \quad | \quad
-        \icontext{\faEnvelope}{\href{mailto:shagupta@ethz.ch}{shagupta@ethz.ch}} \quad | \quad
-        \icontext{\faPhone}{+41 76 267 1025} \\[1pt]
-        \small
-        \href{https://linkedin.com/in/shaswat-gupta/}{\icontext{\faLinkedin}{\textcolor{accentblue}{LinkedIn}}} ~
-        \href{https://github.com/Shaswat-G}{\icontext{\faGithub}{\textcolor{accentblue}{GitHub}}} ~
-        \href{https://shaswat.dev}{\icontext{\faGlobe}{\textcolor{accentblue}{shaswat.dev}}}
-        \vspace{-8pt}
-    \end{center}
+% --- Custom commands for icons and info ---
+\newcommand{\icontext}[2]{\raisebox{-0.2\height}{#1}~#2}
+
+% --- LinkedIn-style profile header ---
+\newcommand{\profileheader}{
+  \vspace{8pt}
+  \begin{tabularx}{\textwidth}{@{}l@{\hspace{1.1cm}}X@{}}
+    % Profile picture (slightly larger with blue border)
+    \fcolorbox{accentblue}{white}{
+      \includegraphics[width=3.0cm,height=3.0cm,keepaspectratio,clip,trim=0 0 0 0]{shaswat.png}
     }
+    &
+    % Name, title, and contact info
+    \begin{minipage}[b]{\linewidth}
+      {\Huge \textcolor{accentblue}{\scshape Shaswat Gupta}} \\[3pt]
+      {\large \textcolor{mutedtext}{AI Engineer \& Researcher}} \\[6pt]
+      \icontext{\faMapMarker}{\textcolor{mutedtext}{Zurich, Switzerland}} \quad
+      \icontext{\faEnvelope}{\href{mailto:shagupta@ethz.ch}{\textcolor{accentblue}{shagupta@ethz.ch}}} \quad
+      \icontext{\faPhone}{\textcolor{accentblue}{+41 76 267 1025}} \\[5pt]
+      \href{https://linkedin.com/in/shaswat-gupta/}{\icontext{\faLinkedin}{\textcolor{accentblue}{LinkedIn}}} ~
+      \href{https://github.com/Shaswat-G}{\icontext{\faGithub}{\textcolor{accentblue}{GitHub}}} ~
+      \href{https://shaswat.dev}{\icontext{\faGlobe}{\textcolor{accentblue}{shaswat.dev}}}
+    \end{minipage}
+  \end{tabularx}
+  \vspace{6pt}
+  \hrule height 1.2pt \color{bordercolor}
+  \vspace{10pt}
+}
 
-    % --- Letter section formatting ---
-    \newcommand{\letterSection}[1]{
-    \section*{#1}
-    \vspace{-6pt}
-    }
+% --- Letter section formatting ---
+\newcommand{\letterSection}[1]{
+  \section*{#1}
+  \vspace{-8pt}
+}
 
-    % --- Document starts here ---
-    \begin{document}
+% --- Document starts here ---
+\begin{document}
 
-    % --- Header ---
-    \headerinfo
+% --- Profile header (LinkedIn style) ---
+\profileheader
 
-    \vspace{8pt}
+% --- Date and recipient ---
+{\color{mutedtext}
+\textbf{May 13, 2025} \\[1pt]
+\textbf{ETH Feasibility Lab} \\
+Switzerland Innovation Park Zürich \\
+Dübendorf, Switzerland
+}
 
-    % --- Date and recipient ---
-    {\color{mutedtext}
-    \textbf{June 10, 2024} \\[2pt]
-    \textbf{Company Recruitment Team} \\
-    Google Inc. \\
-    1600 Amphitheatre Parkway \\
-    Mountain View, CA 94043
-    }
+\vspace{12pt}
 
-    \vspace{16pt}
+% --- Salutation ---
+{\color{headercolor}
+Dear Selection Committee,
+}
 
-    % --- Salutation ---
-    {\color{headercolor}
-    Dear Mr./Ms./Dr. LastName,
-    }
+\vspace{2pt}
 
-    \vspace{12pt}
+% --- Letter content ---
+\letterSection{Introduction}
+I am strongly interested in the Master's thesis opportunity at ETH Zürich's Feasibility Lab for the 2025/26 academic year. As an MSc Computer Science student at ETH with a passion for applying technical innovation to solve real-world challenges, I am excited by the prospect of joining your agile engineering task force.
 
-    % --- Letter content ---
-    \letterSection{About Me}
-    I am a passionate computer scientist with a strong background in large-scale AI engineering, machine learning, and cloud computing. My experience spans both industry and research, where I have led impactful projects in supply chain optimization, enterprise AI adoption, and deep learning for biomedical signals. I thrive in fast-paced environments and enjoy solving complex problems with robust, scalable solutions.
+\letterSection{Cross-Disciplinary Background}
+My unique combination of expertise in both mechanical engineering and computer science positions me perfectly for the interdisciplinary nature of the Feasibility Lab. As a Mechanical Engineering Gold Medalist (Rank 1/165 at IIT Bombay), I possess a strong foundation in engineering principles, while my current MSc in Computer Science at ETH enables me to bridge physical systems with AI-driven solutions—precisely the intersection where the Feasibility Lab operates.
 
-    \letterSection{Why Google?}
-    Google's commitment to innovation, open research, and global impact aligns perfectly with my values and aspirations. I am inspired by Google's culture of excellence and its leadership in AI and cloud technologies. I am eager to contribute to teams that push the boundaries of technology and create products that touch billions of lives.
+\letterSection{Industry-Focused Innovation}
+My professional experience demonstrates a track record of delivering impact across diverse industrial contexts: At AB InBev, I engineered an end-to-end logistics system that achieved \$2.4M in annual savings; for Capital Foods, I researched and presented 50+ automation proposals to C-suite leadership; and with Glenmark Pharmaceuticals, I automated demand planning processes for 5,000+ SKUs, reducing reporting cycles by 75\%. Each experience has sharpened my ability to transform technical concepts into practical solutions.
 
-    \letterSection{Why Me?}
-    With a proven track record in delivering production-grade AI solutions and a deep understanding of both engineering and research, I am confident in my ability to add value to Google. My technical expertise, leadership experience, and drive for continuous learning make me an excellent fit for your team.
+\letterSection{Technical Expertise}
+My AI/ML skill set aligns directly with the challenges highlighted in your posting: I've developed SimpleSleepNet, a self-supervised learning framework with 80\%+ accuracy; created complex ensemble forecasting pipelines; and built recommendation systems using collaborative filtering. As a Research Assistant at ETH's Chair of Technology and Innovation Management, I'm currently analyzing ML/AI adoption patterns across 600+ enterprises—experience that strengthens my ability to identify where and how AI can create value.
 
-    \vspace{16pt}
+\letterSection{Why the Feasibility Lab?}
+The opportunity to participate in the full innovation cycle—from identifying needs to building prototypes and developing MVPs—perfectly aligns with my aspirations. I'm particularly drawn to the Lab's focus on agile methodologies and the chance to collaborate with industry partners like Bühler, VAT, and V-Zug. The cross-disciplinary nature of your projects represents an ideal environment for me to apply my dual background while expanding my expertise through collaborative learning.
 
-    % --- Closing ---
-    {\color{headercolor}
-    Sincerely,\\[12pt]
-    Shaswat Gupta
-    }
+\vspace{8pt}
 
-    \vspace{8pt}
-    {\color{mutedtext}
-    Enclosure: Curriculum Vitae
-    }
+% --- Closing ---
+{\color{headercolor}
+Sincerely,\\[12pt]
+Shaswat Gupta
+}
 
-    \end{document}
+\vspace{8pt}
+{\color{mutedtext}
+MSc Computer Science\\
+ETH Zürich
+}
+
+\end{document}
