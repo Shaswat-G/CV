@@ -1,0 +1,202 @@
+% Main document class and settings
+\documentclass[letterpaper,10pt]{article}
+
+% --- Package imports ---
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage{graphicx} % For profile picture
+\usepackage{tcolorbox} % For colored backgrounds
+\tcbuselibrary{skins} % Load the skins library to use the 'enhanced' option
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt} % Set paragraph skip to 0 to remove extra space
+\input{glyphtounicode}
+
+% --- Color definitions ---
+\definecolor{accentblue}{RGB}{74,122,175}
+\definecolor{darkroyalblue}{RGB}{30,56,120} % dark royal blue
+\definecolor{textcolor}{RGB}{17,17,17}
+\definecolor{headercolor}{RGB}{0,0,0}
+\definecolor{mutedtext}{RGB}{51,51,51}
+\definecolor{bordercolor}{RGB}{68,68,68}
+\definecolor{sectionbg}{RGB}{245,247,250} % very light grey
+
+% --- Page layout settings ---
+\pagestyle{empty} % No footer/header
+
+% --- Margin adjustments ---
+\addtolength{\oddsidemargin}{-0.3in} % was -0.6in
+\addtolength{\evensidemargin}{-0.2in} % was -0.5in
+\addtolength{\textwidth}{0.79in} % was 1.19in
+\addtolength{\topmargin}{-.5in} % was -.7in
+\addtolength{\textheight}{1.0in} % was 1.4in
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\justifying % Add this line to justify all text
+
+% --- Section formatting ---
+\newtcolorbox{sectionbox}{
+  colback=sectionbg,
+  colframe=accentblue,
+  boxrule=0pt,
+  arc=2pt,
+  left=4pt,
+  right=4pt,
+  top=2pt,
+  bottom=2pt,
+  enhanced,
+  width=\textwidth,
+  before skip=6pt,
+  after skip=2pt,
+  boxsep=0pt,
+}
+\renewcommand{\section}[1]{%
+  \begin{sectionbox}
+    \color{darkroyalblue}\scshape\raggedright\large\bfseries #1
+  \end{sectionbox}
+  \color{black}
+}
+
+% --- Custom commands for icons and info ---
+\newcommand{\icontext}[2]{\raisebox{-0.2\height}{#1}~#2}
+
+% --- LinkedIn-style profile header ---
+\newtcolorbox{profilebox}{
+  colback=sectionbg, % use light grey as background
+  colframe=accentblue,
+  boxrule=0pt,
+  arc=3pt,
+  left=8pt,
+  right=8pt,
+  top=8pt,
+  bottom=8pt,
+  enhanced,
+  width=\textwidth,
+  before skip=0pt,
+  after skip=10pt,
+  boxsep=0pt,
+}
+\newcommand{\profileheader}{%
+  \begin{profilebox}
+    \begin{tabularx}{\textwidth}{@{}l@{\hspace{1.1cm}}X@{}}
+      % Profile picture (slightly larger with blue border)
+      \fcolorbox{accentblue}{white}{
+        \includegraphics[width=3.0cm,height=3.0cm,keepaspectratio,clip,trim=0 0 0 0]{shaswat.png}
+      }
+      &
+      % Name, title, and contact info
+      \begin{minipage}[b]{\linewidth}
+        {\Huge \textcolor{darkroyalblue}{\scshape Shaswat Gupta}} \\[3pt]
+        {\large \textcolor{mutedtext}{AI Engineer \& Researcher}} \\[6pt]
+        \icontext{\faMapMarker}{\textcolor{mutedtext}{Zurich, Switzerland}} \quad
+        \icontext{\faEnvelope}{\href{mailto:shagupta@ethz.ch}{\textcolor{accentblue}{shagupta@ethz.ch}}} \quad
+        \icontext{\faPhone}{\textcolor{accentblue}{+41 76 267 1025}} \\[5pt]
+        \href{https://linkedin.com/in/shaswat-gupta/}{\icontext{\faLinkedin}{\textcolor{accentblue}{LinkedIn}}} ~
+        \href{https://github.com/Shaswat-G}{\icontext{\faGithub}{\textcolor{accentblue}{GitHub}}} ~
+        \href{https://shaswat.dev}{\icontext{\faGlobe}{\textcolor{accentblue}{shaswat.dev}}}
+      \end{minipage}
+    \end{tabularx}
+    \vspace{6pt}
+    \hrule height 1.2pt \color{bordercolor}
+  \end{profilebox}
+}
+
+% --- Letter section formatting ---
+\newcommand{\letterSection}[1]{%
+    \vspace{3 pt}
+  \begin{sectionbox}
+    \color{darkroyalblue}\scshape\raggedright\large\bfseries #1
+  \end{sectionbox}
+  \vspace{1 pt}
+}
+
+% --- Document starts here ---
+\begin{document}
+
+% --- Profile header (LinkedIn style) ---
+\profileheader
+
+% --- Date and recipient ---
+{\color{mutedtext}
+\begin{justify} % Justify this block
+\textbf{May 13, 2025} \\[1pt]
+\textbf{ETH Feasibility Lab} \\
+Switzerland Innovation Park Zürich \\
+Dübendorf, Switzerland
+\end{justify}
+}
+
+\vspace{8pt}
+
+% --- Salutation ---
+{\color{headercolor}
+\begin{justify} % Justify this block
+Dear Selection Committee,
+\end{justify}
+}
+
+% \vspace{2pt}
+
+% --- Letter content ---
+\letterSection{Introduction}
+\begin{justify}
+I am strongly interested in the Master's thesis opportunity at ETH Zürich's Feasibility Lab for the 2025/26 academic year. As an MSc Computer Science student at ETH with a passion for applying technical innovation to solve real-world challenges, I am excited by the prospect of joining your agile engineering task force.
+\end{justify}
+
+\letterSection{Cross-Disciplinary Background}
+\begin{justify}
+My unique combination of expertise in both mechanical engineering and computer science positions me perfectly for the interdisciplinary nature of the Feasibility Lab. As a Mechanical Engineering Gold Medalist (Rank 1/165 at IIT Bombay), I possess a strong foundation in engineering principles, while my current MSc in Computer Science at ETH enables me to bridge physical systems with AI-driven solutions—precisely the intersection where the Feasibility Lab operates.
+\end{justify}
+
+
+\letterSection{Industry-Focused Innovation}
+\begin{justify}
+My professional experience demonstrates a track record of delivering impact across diverse industrial contexts: At AB InBev, I engineered an end-to-end logistics system that achieved \$2.4M in annual savings; for Capital Foods, I researched and presented 50+ automation proposals to C-suite leadership; and with Glenmark Pharmaceuticals, I automated demand planning processes for 5,000+ SKUs, reducing reporting cycles by 75\%. Each experience has sharpened my ability to transform technical concepts into practical solutions.
+\end{justify}
+
+
+\letterSection{Technical Expertise}
+\begin{justify}
+My AI/ML skill set aligns directly with the challenges highlighted in your posting: I've developed SimpleSleepNet, a self-supervised learning framework with 80\%+ accuracy; created complex ensemble forecasting pipelines; and built recommendation systems using collaborative filtering. As a Research Assistant at ETH's Chair of Technology and Innovation Management, I'm currently analyzing ML/AI adoption patterns across 600+ enterprises—experience that strengthens my ability to identify where and how AI can create value.
+\end{justify}
+
+
+\letterSection{Why the Feasibility Lab?}
+\begin{justify}
+The opportunity to participate in the full innovation cycle—from identifying needs to building prototypes and developing MVPs—perfectly aligns with my aspirations. I'm particularly drawn to the Lab's focus on agile methodologies and the chance to collaborate with industry partners like Bühler, VAT, and V-Zug. The cross-disciplinary nature of your projects represents an ideal environment for me to apply my dual background while expanding my expertise through collaborative learning.
+\end{justify}
+
+\vspace{2pt}
+
+% --- Closing ---
+
+\begin{justify}
+Sincerely,\\
+Shaswat Gupta
+\end{justify}
+
+\begin{justify}
+\vspace{4 pt}
+{\color{mutedtext}
+MSc Computer Science\\
+ETH Zürich
+}
+\end{justify}
+
+
+
+\end{document}
