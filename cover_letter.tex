@@ -1,0 +1,124 @@
+% Main document class and settings
+    \documentclass[letterpaper,10pt]{article}
+
+    % --- Package imports ---
+    \usepackage{latexsym}
+    \usepackage[empty]{fullpage}
+    \usepackage{titlesec}
+    \usepackage{marvosym}
+    \usepackage[usenames,dvipsnames]{color}
+    \usepackage{enumitem}
+    \usepackage[hidelinks]{hyperref}
+    \usepackage{fancyhdr}
+    \usepackage[english]{babel}
+    \usepackage{tabularx}
+    \usepackage{fontawesome5}
+    \usepackage{multicol}
+    \usepackage{setspace}
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt}
+    \input{glyphtounicode}
+
+    % --- Color definitions (from website, now using RGB) ---
+    \definecolor{accentblue}{RGB}{74,122,175}
+    \definecolor{textcolor}{RGB}{17,17,17}
+    \definecolor{headercolor}{RGB}{0,0,0}
+    \definecolor{mutedtext}{RGB}{51,51,51}
+    \definecolor{bordercolor}{RGB}{68,68,68}
+
+    % --- Page layout settings ---
+    \pagestyle{fancy}
+    \fancyhf{}
+    \fancyfoot{}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+
+    % --- Margin adjustments ---
+    \addtolength{\oddsidemargin}{-0.6in}
+    \addtolength{\evensidemargin}{-0.5in}
+    \addtolength{\textwidth}{1.19in}
+    \addtolength{\topmargin}{-.7in}
+    \addtolength{\textheight}{1.4in}
+
+    \urlstyle{same}
+    \raggedbottom
+    \raggedright
+    \setlength{\tabcolsep}{0in}
+
+    % --- Section formatting ---
+    \titleformat{\section}{
+    \color{accentblue}\vspace{8pt}\scshape\raggedright\large\bfseries
+    }{}{0em}{}[\color{bordercolor}\titlerule \vspace{-5pt}]
+
+    % --- Custom commands for icons and info ---
+    \newcommand{\icontext}[2]{\raisebox{-0.2\height}{#1}~#2}
+    \newcommand{\headerinfo}{
+    \begin{center}
+        {\Huge \textcolor{accentblue}{\scshape Shaswat Gupta}} \\[2pt]
+        \icontext{\faMapMarker}{Zurich, Switzerland} \quad | \quad
+        \icontext{\faEnvelope}{\href{mailto:shagupta@ethz.ch}{shagupta@ethz.ch}} \quad | \quad
+        \icontext{\faPhone}{+41 76 267 1025} \\[1pt]
+        \small
+        \href{https://linkedin.com/in/shaswat-gupta/}{\icontext{\faLinkedin}{\textcolor{accentblue}{LinkedIn}}} ~
+        \href{https://github.com/Shaswat-G}{\icontext{\faGithub}{\textcolor{accentblue}{GitHub}}} ~
+        \href{https://shaswat.dev}{\icontext{\faGlobe}{\textcolor{accentblue}{shaswat.dev}}}
+        \vspace{-8pt}
+    \end{center}
+    }
+
+    % --- Letter section formatting ---
+    \newcommand{\letterSection}[1]{
+    \section*{#1}
+    \vspace{-6pt}
+    }
+
+    % --- Document starts here ---
+    \begin{document}
+
+    % --- Header ---
+    \headerinfo
+
+    \vspace{8pt}
+
+    % --- Date and recipient ---
+    {\color{mutedtext}
+    \textbf{June 10, 2024} \\[2pt]
+    \textbf{Company Recruitment Team} \\
+    Google Inc. \\
+    1600 Amphitheatre Parkway \\
+    Mountain View, CA 94043
+    }
+
+    \vspace{16pt}
+
+    % --- Salutation ---
+    {\color{headercolor}
+    Dear Mr./Ms./Dr. LastName,
+    }
+
+    \vspace{12pt}
+
+    % --- Letter content ---
+    \letterSection{About Me}
+    I am a passionate computer scientist with a strong background in large-scale AI engineering, machine learning, and cloud computing. My experience spans both industry and research, where I have led impactful projects in supply chain optimization, enterprise AI adoption, and deep learning for biomedical signals. I thrive in fast-paced environments and enjoy solving complex problems with robust, scalable solutions.
+
+    \letterSection{Why Google?}
+    Google's commitment to innovation, open research, and global impact aligns perfectly with my values and aspirations. I am inspired by Google's culture of excellence and its leadership in AI and cloud technologies. I am eager to contribute to teams that push the boundaries of technology and create products that touch billions of lives.
+
+    \letterSection{Why Me?}
+    With a proven track record in delivering production-grade AI solutions and a deep understanding of both engineering and research, I am confident in my ability to add value to Google. My technical expertise, leadership experience, and drive for continuous learning make me an excellent fit for your team.
+
+    \vspace{16pt}
+
+    % --- Closing ---
+    {\color{headercolor}
+    Sincerely,\\[12pt]
+    Shaswat Gupta
+    }
+
+    \vspace{8pt}
+    {\color{mutedtext}
+    Enclosure: Curriculum Vitae
+    }
+
+    \end{document}
