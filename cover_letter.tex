@@ -117,11 +117,11 @@
 
 % --- Letter section formatting ---
 \newcommand{\letterSection}[1]{%
-    \vspace{3 pt}
+    % \vspace{3 pt}
   \begin{sectionbox}
     \color{darkroyalblue}\scshape\raggedright\large\bfseries #1
   \end{sectionbox}
-  \vspace{1 pt}
+  % \vspace{1 pt}
 }
 
 % --- Document starts here ---
@@ -132,58 +132,52 @@
 
 % --- Date and recipient ---
 {\color{mutedtext}
-\begin{justify} % Justify this block
-\textbf{May 13, 2025} \\[1pt]
-\textbf{ETH Feasibility Lab} \\
-Switzerland Innovation Park Zürich \\
-Dübendorf, Switzerland
+\begin{justify}
+\textbf{May 14, 2025} \\[1pt]
+\textbf{IBM Research Zurich} \\
+AI for Data Integration Group \\
+Ref. 2025\_002 \\
 \end{justify}
 }
-
-\vspace{8pt}
-
+\vspace{-10pt}
 % --- Salutation ---
 {\color{headercolor}
-\begin{justify} % Justify this block
-Dear Selection Committee,
+\begin{justify}
+Dear IBM Research Selection Committee,
 \end{justify}
 }
-
-% \vspace{2pt}
 
 % --- Letter content ---
 \letterSection{Introduction}
 \begin{justify}
-I am strongly interested in the Master's thesis opportunity at ETH Zürich's Feasibility Lab for the 2025/26 academic year. As an MSc Computer Science student at ETH with a passion for applying technical innovation to solve real-world challenges, I am excited by the prospect of joining your agile engineering task force.
+I am writing to express my strong interest in the Master's thesis position on "Generative AI Models for Composable Data Management Optimizers" (Ref. 2025\_002) at IBM Research Zurich. As an MSc Computer Science student at ETH Zürich with a 5.25/6 GPA specializing in Machine Intelligence, I am passionate about applying innovative generative AI techniques to advance cross-engine optimization in composable data management systems.
 \end{justify}
 
-\letterSection{Cross-Disciplinary Background}
+\letterSection{Relevant AI \& Data Systems Experience}
 \begin{justify}
-My unique combination of expertise in both mechanical engineering and computer science positions me perfectly for the interdisciplinary nature of the Feasibility Lab. As a Mechanical Engineering Gold Medalist (Rank 1/165 at IIT Bombay), I possess a strong foundation in engineering principles, while my current MSc in Computer Science at ETH enables me to bridge physical systems with AI-driven solutions—precisely the intersection where the Feasibility Lab operates.
+My experience bridges machine learning, data engineering, and scalable optimization, with focus on building systems that enhance data processing efficiency. As a Research Assistant at ETH, I developed end-to-end data processing pipelines that integrated multiple data sources and engineered automated statistical frameworks executing thousands of tests for pattern detection—skills directly applicable to abstracting workloads independent of API.
+
+At AB InBev, I engineered an ensemble forecasting pipeline combining deep learning models, developed a Gurobi-powered optimizer for 2,000+ US distribution routes, and built a scenario planning simulator for cost-performance optimization—delivering \$2.4M in annual savings. This experience directly aligns with your team's focus on optimizing for cost-performance while considering dataset statistics and workload characteristics.
 \end{justify}
 
-
-\letterSection{Industry-Focused Innovation}
+\letterSection{Technical Skills Matched to Project Requirements}
 \begin{justify}
-My professional experience demonstrates a track record of delivering impact across diverse industrial contexts: At AB InBev, I engineered an end-to-end logistics system that achieved \$2.4M in annual savings; for Capital Foods, I researched and presented 50+ automation proposals to C-suite leadership; and with Glenmark Pharmaceuticals, I automated demand planning processes for 5,000+ SKUs, reducing reporting cycles by 75\%. Each experience has sharpened my ability to transform technical concepts into practical solutions.
+My technical toolkit includes: extensive experience with PyTorch, TensorFlow/Keras, and Hugging Face Transformers through projects comparing self-supervised learning approaches; advanced proficiency with Python alongside PySpark and Polars; strong experience with database systems and SQL; hands-on experience with mathematical optimization using Gurobi; and proficiency with Docker, cloud services, Git/GitHub, and Linux environments for robust development workflows.
 \end{justify}
 
-
-\letterSection{Technical Expertise}
+\letterSection{Deep Learning \& Self-Supervised Experience}
 \begin{justify}
-My AI/ML skill set aligns directly with the challenges highlighted in your posting: I've developed SimpleSleepNet, a self-supervised learning framework with 80\%+ accuracy; created complex ensemble forecasting pipelines; and built recommendation systems using collaborative filtering. As a Research Assistant at ETH's Chair of Technology and Innovation Management, I'm currently analyzing ML/AI adoption patterns across 600+ enterprises—experience that strengthens my ability to identify where and how AI can create value.
+My semester thesis at ETH's Medical Data Science Group focused on self-supervised contrastive learning for classification—particularly relevant to your work with generative AI. I systematically evaluated domain-specific augmentations, discovered optimal combinations for maximizing performance, and designed lightweight architectures optimized for efficiency. This experience with representation learning provides a strong foundation for developing generative AI approaches to workload abstraction and optimization across diverse execution engines.
 \end{justify}
 
-
-\letterSection{Why the Feasibility Lab?}
+\letterSection{Motivation for IBM Research}
 \begin{justify}
-The opportunity to participate in the full innovation cycle—from identifying needs to building prototypes and developing MVPs—perfectly aligns with my aspirations. I'm particularly drawn to the Lab's focus on agile methodologies and the chance to collaborate with industry partners like Bühler, VAT, and V-Zug. The cross-disciplinary nature of your projects represents an ideal environment for me to apply my dual background while expanding my expertise through collaborative learning.
+IBM Research Zurich's work on cross-engine optimizers using generative AI methods is deeply inspiring. I am excited to contribute to the challenge of abstracting diverse user workloads and using advanced AI techniques to intelligently match them to appropriate execution engines while optimizing for performance and cost, with a team that values high-quality science. Thank you for considering my application.
 \end{justify}
 
 \vspace{2pt}
 
 % --- Closing ---
-
 \begin{justify}
 Sincerely,\\
 Shaswat Gupta
@@ -196,7 +190,5 @@ MSc Computer Science\\
 ETH Zürich
 }
 \end{justify}
-
-
 
 \end{document}
