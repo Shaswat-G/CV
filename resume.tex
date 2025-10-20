@@ -130,16 +130,17 @@
           {B.Tech. in Mechanical Engineering, \textbf{Rank 1/165, Gold Medalist, Highest GPA} in batch: 9.6/10}{Mumbai, India}
 \resumeSubHeadingListEnd
 
-% --- PROFESSIONAL EXPERIENCE SECTION ---
-\section{Professional Experience}
+% --- EXPERIENCE SECTION ---
+\section{Experience}
 \resumeSubHeadingListStart
 
-    \resumeSubheading
+        \resumeSubheading
       {IBM Research Europe — Zurich, flex.data Group}{Sep 2025 -- Present}
-      {Master's Thesis Researcher: Adaptive multi-objective query routing in heterogeneous engines}{Zurich, Switzerland}
-      \resumeItemListStart
-        \resumeItem{Training GNN-based cost model for multi-objective query optimization across distributed heterogeneous database systems}
-      \resumeItemListEnd
+      {Master's Thesis (Research): Adaptive multi-objective query routing in heterogeneous engines}{Zurich, Switzerland}
+            \resumeItemListStart
+                \resumeItem{Engineered cross-engine resource instrumentation framework for heterogeneous query engines (Spark, Presto, PostgreSQL) with standardized profiling across compute, memory, and I/O preserving query-level attribution granularity}
+                \resumeItem{Conducted systematic TPC-H benchmarking for distributed cost model optimization and intelligent query routing}
+            \resumeItemListEnd
 
     \resumeSubheading
       {AB InBev — World's Largest Brewing Company }{Aug 2022 -- Aug 2023}
@@ -168,42 +169,34 @@
         \resumeItem{Outperformed existing models by 30\%, Awarded Best intern among 100+ peers; received full-time Associate ML Engineer offer}
       \resumeItemListEnd
 
-\resumeSubHeadingListEnd
-\vspace{-16pt}
-
-% --- RESEARCH EXPERIENCE SECTION ---
-\section{Research Experience}
-\resumeSubHeadingListStart
         \resumeSubheading
       {Institute for Machine Learning, ETH Zürich}{Jan 2024 -- Present}
-      {Machine Learning Research Projects \& AI Engineering}{Zurich, Switzerland}
+      {Research: Machine Learning Research Projects \& AI Engineering}{Zurich, Switzerland}
             \resumeItemListStart
-                \resumeItem{\textbf{Large Scale AI Engineering:} Engineered PyRecover module for intelligent checkpointing in distributed GPU training with model parallelization. Implemented HPC techniques and performance profiling, significantly improving cluster fault tolerance}
-                \resumeItem{\textbf{SimpleSleepNet:} Developed modular self-supervised contrastive learning framework for sleep stage classification (80\%+ accuracy, $<$1MB model) with GPU acceleration. Evaluated 13 signal augmentations across 5 categories \textit{Software Engineering}}
-                \resumeItem{\textbf{DeepSleepBench:} Engineered scalable ML research framework benchmarking 3 training paradigms across neural architectures, benchmarked latent-representations optimizing CNN+Attention pipeline achieving 79.8\% accuracy on EEG classification.}
+                \resumeItem{\textbf{Large Scale AI Engineering:} Engineered PyRecover module for distributed training infrastructure with intelligent checkpointing and model parallelization. Implemented HPC techniques, performance profiling, and MLOps pipeline orchestration with experiment tracking; significantly improved cluster fault tolerance}
+                \resumeItem{\textbf{SimpleSleepNet:} Developed modular self-supervised contrastive learning framework for sleep stage classification (80\%+ accuracy, $<$1MB model) with GPU acceleration. Evaluated 13 signal augmentations across 5 categories}
+                \resumeItem{\textbf{DeepSleepBench:} Engineered scalable ML research framework benchmarking 3 training paradigms across neural architectures; optimized CNN+Attention pipeline achieving 79.8\% accuracy on EEG classification}
             \resumeItemListEnd
 
         \resumeSubheading
       {Chair of Technology and Innovation Management, ETH Zürich}{Mar 2024 -- Present}
       {Research Assistant supervised by Prof. Dr. Stefano Brusoni}{Zurich, Switzerland}
             \resumeItemListStart
-                \resumeItem{\textbf{Enterprise ML/AI Adoption Research:} Designed data pipeline and statistical analysis framework for 600+ enterprises. Automated 10,000+ statistical tests with dynamic visualization, reducing analysis time by 80\%. \textit{Python, scipy, OpenAI API}.}
-                \resumeItem{\textbf{Unicode Technical Standards Analysis:} Built document parsing and classification system achieving 96\% accuracy across 30+ categories. Engineered distributed workload execution with parallel processing algorithms and optimized LLM integration.}
-                \resumeItem{\textbf{Semiconductor Patent Analysis:} Developed asyncio-powered data acquisition system (20× faster) and BERTopic modeling identifying 80+ technology clusters. Visualized technological shifts across 40+ years. \textit{Python, BERTopic, HDBSCAN, PyTorch}.}
+                \resumeItem{\textbf{Enterprise ML/AI Adoption Research:} Designed data pipeline and statistical analysis framework for 600+ enterprises. Automated 10,000+ statistical tests with dynamic visualization, reducing analysis time by 80\%}
+                \resumeItem{\textbf{Unicode Technical Standards Analysis:} Built document parsing and classification system achieving 96\% accuracy across 30+ categories. Engineered distributed workload execution with parallel processing algorithms and optimized LLM integration}
+                \resumeItem{\textbf{Semiconductor Patent Analysis:} Developed asyncio-powered data acquisition system (20× faster) and BERTopic modeling identifying 80+ technology clusters. Visualized technological shifts across 40+ years}
       \resumeItemListEnd
 
     \resumeSubheading
-          {Industry Internships}{2019 -- 2021}
+          {Industry Internships (Research)}{2019 -- 2021}
           {Research Associate across global academic and corporate organizations}{India}
           \resumeItemListStart
-          \resumeItem{\textbf{Protium, Portfolio Optimization:} Engineered combinatorial optimization algorithms for MSME debt consolidation using linear programming. Built automated pipeline for time-based yield analysis for 600+ debt securities; received partner's recommendation.}
-          \resumeItem{\textbf{World Bank, Energy Strategy:} Spearheaded quantitative analysis, economic modeling and 10-year demand forecasting of conventional fuels against cleaner alternatives across three nations. Created market readiness framework for energy policies.}
-          \resumeItem{\textbf{Indian School of Business, Epidemiological Modeling:} Conducted advanced SIR modeling \& geospatial analysis with Prof. Sarang Deo for 3,200+ agricultural markets serving 12,800+ villages, informing the Government's COVID-19 procurement policy.}
+          \resumeItem{\textbf{Protium, Portfolio Optimization:} Engineered combinatorial optimization algorithms for MSME debt consolidation using linear programming. Built automated pipeline for time-based yield analysis for 600+ debt securities; received partner's recommendation}
           \resumeItem{\textbf{RephraseAI (Forbes 30-Under-30), AI Video Synthesis:} Contributed to multi-modal AI video synthesis technology combining textual and visual features (acquired by Adobe). Represented startup at AWS AI Conclave '19}
           \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-% \vspace{-16pt}
+\vspace{-16pt}
 
 % --- HONORS & SKILLS SECTION ---
 % \section{Honors \& Skills}
@@ -230,7 +223,8 @@
 {\vspace{-4pt} \scshape\raggedright\large\bfseries Technical Skills}
 \begin{itemize}[leftmargin=0.15in]
   \item \textbf{Programming:} Python, C++, SQL, Bash/Linux 
-  \item \textbf{Machine Learning:} PyTorch, TensorFlow, Computer Vision, NLP, Distributed Computing, Performance Profiling
+  \item \textbf{Machine Learning:} PyTorch, TensorFlow, Computer Vision, NLP, scikit-learn, XGBoost, Hugging Face Transformers
+  \item \textbf{Distributed Systems \& Performance:} Spark, Presto, PostgreSQL, Performance Profiling, HPC, Resource Instrumentation, Model Parallelization
   \item \textbf{MLOps \& Cloud:} Git, Docker, Kubernetes, GitHub Actions, AWS (EC2/S3/Lambda), Azure ML, GCP, MLflow
   \item \textbf{Data Engineering:} Pandas, Numpy, Apache Airflow, Apache Kafka, Scipy, Snowflake, PostgreSQL, MongoDB, vector databases
 \end{itemize}
